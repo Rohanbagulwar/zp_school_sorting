@@ -66,8 +66,8 @@ if df is not None:
         st.metric("Total Columns", len(df.columns))
     with col3:
         if 'UG_Eligible_Post' in df.columns:
-            eligible_count = len(df[df['UG_Eligible_Post'] > 1])
-            st.metric("Records with UG_Eligible_Post > 1", eligible_count)
+            eligible_count = len(df[df['UG_Eligible_Post'] >= 1])
+            st.metric("Records with UG_Eligible_Post >= 1", eligible_count)
 
     # Show column names for reference
     # with st.expander("📝 Available Columns"):
