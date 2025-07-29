@@ -124,7 +124,7 @@ if df is not None:
     
     # Filter by UG_Eligible_Post > 1
     if 'UG_Eligible_Post' in filtered_df.columns:
-        filtered_df = filtered_df[filtered_df['UG_Eligible_Post'] > 1]
+        filtered_df = filtered_df[filtered_df['UG_Eligible_Post'] >= 1]
     else:
         st.error("'UG_Eligible_Post' column not found in the dataset")
     
